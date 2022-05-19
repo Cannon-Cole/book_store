@@ -6,6 +6,9 @@ All Books
 
 {%block content%}
 <ul>
-    <li>Temp</li>
+    {% for book in books %}
+    <li><a href="{{ book.get_absolute_url}}">{{book.title}} (Rating: {{book.rating}})</li>
+    {% endfor %}
+    
 </ul>
 {%endblock%}
